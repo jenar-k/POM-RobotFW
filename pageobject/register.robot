@@ -4,7 +4,7 @@ Variables           ../resources/register_locators.yaml
 
 *** Variables ***
 ${homepage_url}     http://automationpractice.com/
-${email}            abcde000001@gmail.com
+${email}            abcde000002@gmail.com
 ${first_name}       Jen
 ${last_name}        Key
 ${password}         123456
@@ -47,10 +47,9 @@ user can input password field
     Input Text                      ${password_field}           ${password}
 
 user can input DOB
-    [Arguments]                     ${year}=1997
     Select From List By Index       ${date}                     20
     Select From List By Index       ${month}                    6
-    Click Element                   ${years.format("${year}")}  
+    Click Element                   ${years}  
 
 user can click newsletter checkbox
     Click Element                   ${newsletter}
