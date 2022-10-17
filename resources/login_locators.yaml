@@ -1,0 +1,4 @@
+sign_in_button: //a[@class="login"]
+email_field: //input[@id="email"]
+password_field: //input[@id="passwd"]
+login_button: //button[@id="SubmitLogin"]
