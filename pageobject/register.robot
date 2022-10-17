@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation       Register page related keyword
+Library             FakerLibrary
 Variables           ../resources/register_locators.yaml
 
 *** Variables ***
@@ -27,7 +28,7 @@ user can click sign in button
     Wait Until Element Is Visible   ${sign_in_button}        
     Click Element                   ${sign_in_button}
 
-user can input email address field      
+user can input email address field
     Input Text                      ${email_field}              ${email}
 
 user can click create button            
