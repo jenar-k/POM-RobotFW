@@ -4,7 +4,7 @@ Variables           ../resources/register_locators.yaml
 
 *** Variables ***
 ${homepage_url}     http://automationpractice.com/
-${email}            abcde000002@gmail.com
+${email}            abcde000003@gmail.com
 ${first_name}       Jen
 ${last_name}        Key
 ${password}         123456
