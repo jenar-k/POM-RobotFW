@@ -32,9 +32,13 @@ user can input email address field
 
 user can click create button            
     Click Element                   ${create_button}
+    Wait Until Element Is Visible   ${gender}
+    Wait Until Element Is Visible   ${first_name_field1}
+    Wait Until Element Is Visible   ${last_name_field1}
+    Wait Until Element Is Visible   ${password_field}
+    
 
 user can clik gender radio button
-    Wait Until Element Is Visible   ${gender}
     Click Element                   ${gender}
 
 user can input first name field in personal information
