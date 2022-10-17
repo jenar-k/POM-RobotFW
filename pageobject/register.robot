@@ -1,11 +1,10 @@
 *** Settings ***
 Documentation       Register page related keyword
-Library             FakerLibrary
 Variables           ../resources/register_locators.yaml
 
 *** Variables ***
 ${homepage_url}     http://automationpractice.com/
-${email}            abcde000003@gmail.com
+${email}            abcde000004@gmail.com
 ${first_name}       Jen
 ${last_name}        Key
 ${password}         123456
@@ -31,14 +30,14 @@ user can click sign in button
 user can input email address field
     Input Text                      ${email_field}              ${email}
 
-user can click create button            
+user can click create button
+    [Documentation]                 Ini adalah create user
     Click Element                   ${create_button}
     Wait Until Element Is Visible   ${gender}
     Wait Until Element Is Visible   ${first_name_field1}
     Wait Until Element Is Visible   ${last_name_field1}
     Wait Until Element Is Visible   ${password_field}
     
-
 user can clik gender radio button
     Click Element                   ${gender}
 
@@ -52,9 +51,10 @@ user can input password field
     Input Text                      ${password_field}           ${password}
 
 user can input DOB
+    [Arguments]                     ${year}=1998
     Select From List By Index       ${date}                     20
     Select From List By Index       ${month}                    6
-    Click Element                   ${years}  
+    Click Element                   ${years.format("${year}")}  
 
 user can click newsletter checkbox
     Click Element                   ${newsletter}
